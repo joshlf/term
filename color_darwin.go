@@ -7,74 +7,75 @@ package term
 import (
 	"fmt"
 	t "github.com/mewkiz/pkg/term"
+	"os"
 )
 
-func black(s string) error {
-	fmt.Print(t.Color(s, t.FgBlack))
+func black(s string, f *os.File) error {
+	fmt.Fprint(f, t.Color(s, t.FgBlack))
 	return nil
 }
 
-func white(s string) error {
-	fmt.Print(t.Color(s, t.FgWhite))
+func white(s string, f *os.File) error {
+	fmt.Fprint(f, t.Color(s, t.FgWhite))
 	return nil
 }
 
-func red(s string) error {
-	fmt.Print(t.Color(s, t.FgRed))
+func red(s string, f *os.File) error {
+	fmt.Fprint(f, t.Color(s, t.FgRed))
 	return nil
 }
 
-func lightRed(s string) error {
-	fmt.Print(t.Color(s, t.FgRed))
+func lightRed(s string, f *os.File) error {
+	fmt.Fprint(f, t.Color(s, t.FgRed))
 	return nil
 }
 
-func green(s string) error {
-	fmt.Print(t.Color(s, t.FgGreen))
+func green(s string, f *os.File) error {
+	fmt.Fprint(f, t.Color(s, t.FgGreen))
 	return nil
 }
 
-func lightGreen(s string) error {
-	fmt.Print(t.Color(s, t.FgGreen))
+func lightGreen(s string, f *os.File) error {
+	fmt.Fprint(f, t.Color(s, t.FgGreen))
 	return nil
 }
 
-func darkYellow(s string) error {
-	fmt.Print(t.Color(s, t.FgYellow))
+func darkYellow(s string, f *os.File) error {
+	fmt.Fprint(f, t.Color(s, t.FgYellow))
 	return nil
 }
 
-func lightYellow(s string) error {
-	fmt.Print(t.Color(s, t.FgYellow))
+func lightYellow(s string, f *os.File) error {
+	fmt.Fprint(f, t.Color(s, t.FgYellow))
 	return nil
 }
 
-func blue(s string) error {
-	fmt.Print(t.Color(s, t.FgBlue))
+func blue(s string, f *os.File) error {
+	fmt.Fprint(f, t.Color(s, t.FgBlue))
 	return nil
 }
 
-func lightBlue(s string) error {
-	fmt.Print(t.Color(s, t.FgBlue))
+func lightBlue(s string, f *os.File) error {
+	fmt.Fprint(f, t.Color(s, t.FgBlue))
 	return nil
 }
 
-func magenta(s string) error {
-	fmt.Print(t.Color(s, t.FgMagenta))
+func magenta(s string, f *os.File) error {
+	fmt.Fprint(f, t.Color(s, t.FgMagenta))
 	return nil
 }
 
-func lightMagenta(s string) error {
-	fmt.Print(t.Color(s, t.FgMagenta))
+func lightMagenta(s string, f *os.File) error {
+	fmt.Fprint(f, t.Color(s, t.FgMagenta))
 	return nil
 }
 
-func cyan(s string) error {
-	fmt.Print(t.Color(s, t.FgCyan))
+func cyan(s string, f *os.File) error {
+	fmt.Fprint(f, t.Color(s, t.FgCyan))
 	return nil
 }
 
-func lightCyan(s string) error {
-	fmt.Print(t.Color(s, t.FgCyan))
+func lightCyan(s string, f *os.File) error {
+	fmt.Fprint(f, t.Color(s, t.FgCyan))
 	return nil
 }
