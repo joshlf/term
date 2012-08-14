@@ -1,3 +1,7 @@
+// Copyright 2012 The Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
 // The term package allows easy handling of colors and terminal size cross-platform.
 // It is compatible with unix variants and win32 terminals, but is incompatible with MS-DOS.
 //
