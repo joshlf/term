@@ -7,41 +7,44 @@ package main
 import (
 	"fmt"
 	"github.com/joshlf13/term"
+	"os"
 )
 
 func main() {
 	// On windows, it is possible, though unlikely,
 	// to fail to write to the console. An error
 	// is returned.
-	if err := term.Black("Black"); err != nil {
+	f := os.Stdout
+	
+	if err := term.Black(f, "Black"); err != nil {
 		fmt.Printf("Stupid windows system calls: %v\n", err)
 	}
 
 	fmt.Println()
-	term.White("White")
+	term.White(f, "White")
 	fmt.Println()
-	term.Red("Red")
+	term.Red(f, "Red")
 	fmt.Println()
-	term.LightRed("Light Red")
+	term.LightRed(f, "Light Red")
 	fmt.Println()
-	term.Green("Green")
+	term.Green(f, "Green")
 	fmt.Println()
-	term.LightGreen("Light Green")
+	term.LightGreen(f, "Light Green")
 	fmt.Println()
-	term.DarkYellow("Dark Yellow")
+	term.DarkYellow(f, "Dark Yellow")
 	fmt.Println()
-	term.LightYellow("Light Yellow")
+	term.LightYellow(f, "Light Yellow")
 	fmt.Println()
-	term.Blue("Blue")
+	term.Blue(f, "Blue")
 	fmt.Println()
-	term.LightBlue("Light Blue")
+	term.LightBlue(f, "Light Blue")
 	fmt.Println()
-	term.Magenta("Magenta")
+	term.Magenta(f, "Magenta")
 	fmt.Println()
-	term.LightMagenta("Light Magenta")
+	term.LightMagenta(f, "Light Magenta")
 	fmt.Println()
-	term.Cyan("Cyan")
+	term.Cyan(f, "Cyan")
 	fmt.Println()
-	term.LightCyan("Light Cyan")
+	term.LightCyan(f, "Light Cyan")
 	fmt.Println()
 }
