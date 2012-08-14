@@ -13,70 +13,70 @@ package term
 
 import "os"
 
-func Black(s string, f *os.File) error {
-	return black(s, f)
+func Black(f *os.File, s string) error {
+	return black(f, s)
 }
 
-func White(s string, f *os.File) error {
-	return white(s, f)
+func White(f *os.File, s string) error {
+	return white(f, s)
 }
 
-func Red(s string, f *os.File) error {
-	return red(s, f)
+func Red(f *os.File, s string) error {
+	return red(f, s)
 }
 
 // On non-windows systems,
 // synonymous with Red
-func LightRed(s string, f *os.File) error {
-	return lightRed(s, f)
+func LightRed(f *os.File, s string) error {
+	return lightRed(f, s)
 }
 
-func Green(s string, f *os.File) error {
-	return green(s, f)
+func Green(f *os.File, s string) error {
+	return green(f, s)
 }
 
 // On non-windows systems,
 // synonymous with Green
-func LightGreen(s string, f *os.File) error {
-	return lightGreen(s, f)
+func LightGreen(f *os.File, s string) error {
+	return lightGreen(f, s)
 }
 
-func DarkYellow(s string, f *os.File) error {
-	return darkYellow(s, f)
+func DarkYellow(f *os.File, s string) error {
+	return darkYellow(f, s)
 }
 
 // On non-windows systems,
 // synonymous with DarkYellow
-func LightYellow(s string, f *os.File) error {
-	return lightYellow(s, f)
+func LightYellow(f *os.File, s string) error {
+	return lightYellow(f, s)
 }
 
-func Blue(s string, f *os.File) error {
-	return blue(s, f)
+func Blue(f *os.File, s string) error {
+	return blue(f, s)
 }
 
 // On non-windows systems,
 // synonymous with Blue
-func LightBlue(s string, f *os.File) error {
-	return lightBlue(s, f)
+func LightBlue(f *os.File, s string) error {
+	return lightBlue(f, s)
 }
 
-func Magenta(s string, f *os.File) error {
-	return magenta(s, f)
+func Magenta(f *os.File, s string) error {
+	return magenta(f, s)
 }
 
 // On non-windows systems,
 // synonymous with Magenta
-func LightMagenta(s string, f *os.File) error {
-	return lightMagenta(s, f)
+func LightMagenta(f *os.File, s string) error {
+	return lightMagenta(f, s)
 }
 
-func Cyan(s string, f *os.File) error {
-	return cyan(s, f)
+func Cyan(f *os.File, s string) error {
+	return cyan(f, s)
 }
 
 // On non-windows systems,
 // synonymous with Cyan
-func LightCyan(s string, f *os.File) error {
-	return lightCyan(s, f)
+func LightCyan(f *os.File, s string) error {
+	return lightCyan(f, s)
 }
