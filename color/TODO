@@ -1,0 +1,4 @@
+- Detect whether connected to terminal (put this in more general package?)
+- Detect what kind of terminal/what kinds of color codes are supported
+- Different types per terminal?
+- 
