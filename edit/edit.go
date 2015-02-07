@@ -61,6 +61,25 @@ func Editor() string {
 	return defaultEditor
 }
 
+// EditorFallback behaves like Editor, except that it
+// falls back to fallback instead of vi on Unix or
+// notepad.exe on Windows.
+func EditorFallback(fallback string) string {
+	env := os.Environ()
+	editor, ok := findVar(env, "VISUAL")
+	if ok {
+		return editor
+	}
+	editor, ok = findVar(env, "EDITOR")
+	if ok {
+		return editor
+	}
+	return fallback
+}
+
+// Use findVar because os.Getenv is not powerful enough:
+// it cannot distinguish between an unset variable and
+// one whose value is the empty string.
 func findVar(env []string, v string) (string, bool) {
 	str := v + "="
 	l := len(str)
