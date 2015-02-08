@@ -1,3 +1,5 @@
+// +build !windows
+
 package edit
 
 import (
@@ -6,10 +8,6 @@ import (
 	"os"
 	"os/exec"
 )
-
-func init() {
-	defaultEditor = "notepad.exe"
-}
 
 func editWith(editor string, contents []byte) ([]byte, error) {
 	f, err := ioutil.TempFile("", "")
@@ -21,14 +19,13 @@ func editWith(editor string, contents []byte) ([]byte, error) {
 	if err != nil {
 		return nil, err
 	}
-	f.Close()
 	cmd := exec.Command(editor, f.Name())
 	cmd.Stdin, cmd.Stdout, cmd.Stderr = os.Stdin, os.Stdout, os.Stderr
 	err = cmd.Run()
 	if err != nil {
 		return nil, fmt.Errorf("%v %v: %v", editor, f.Name(), err)
 	}
-	f, err = os.Open(f.Name())
+	_, err = f.Seek(0, 0)
 	if err != nil {
 		return nil, err
 	}
